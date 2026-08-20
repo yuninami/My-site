@@ -1,33 +1,467 @@
-    <!DOCTYPE html>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Alex Morgan's individual portfolio website. Front-end developer creating accessible digital experiences.">
-  <meta name="theme-color" content="#0b1220">
-  <title>Alex Morgan | Front-End Developer</title>
-  <style>
-    :root{--bg:#0b1220;--panel:#121d2e;--panel2:#17243a;--ink:#e9eef7;--muted:#aab7ca;--line:#2b3a50;--accent:#66e3c4;--blue:#8ea7ff;--max:1120px;--radius:18px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:radial-gradient(circle at 80% 0%,#66e3c422,transparent 28rem),var(--bg);font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit}a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.container{width:min(calc(100% - 2rem),var(--max));margin:auto}.skip{position:absolute;left:-9999px;top:1rem;background:var(--accent);color:#06120f;padding:.7rem 1rem;border-radius:8px;font-weight:700}.skip:focus{left:1rem}
-    header{position:sticky;top:0;z-index:2;border-bottom:1px solid var(--line);background:#0b1220e8;backdrop-filter:blur(14px)}.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-weight:800}.mark{display:grid;place-items:center;width:2rem;height:2rem;border-radius:9px;background:var(--accent);color:#06120f}.links{display:flex;gap:1.2rem}.links a{color:var(--muted);text-decoration:none;font-size:.93rem}.links a:hover{color:var(--ink)}
-    main{overflow:hidden}.hero{padding:clamp(5rem,12vw,9rem) 0 6rem}.hero-grid,.two-col{display:grid;grid-template-columns:1.2fr .8fr;gap:4rem;align-items:center}.eyebrow{color:var(--accent);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}h1,h2,h3{line-height:1.15;letter-spacing:-.04em;margin:0 0 1rem}h1{font-size:clamp(3rem,7vw,6.2rem)}h2{font-size:clamp(2rem,4vw,3.25rem)}h3{font-size:1.25rem;letter-spacing:-.02em}.lead{max-width:650px;margin:1.5rem 0 2rem;color:var(--muted);font-size:clamp(1.05rem,2vw,1.25rem)}.actions{display:flex;flex-wrap:wrap;gap:.9rem}.button{display:inline-flex;padding:.78rem 1.05rem;border:1px solid var(--line);border-radius:10px;text-decoration:none;font-weight:750}.button:hover{transform:translateY(-2px)}.primary{border-color:var(--accent);background:var(--accent);color:#06120f}.secondary{background:#ffffff08}
-    .hero-card{min-height:330px;padding:1.4rem;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,#8ea7ff33,#66e3c40d);box-shadow:0 18px 50px #0003}.terminal{height:100%;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;padding:1.3rem;border:1px solid var(--line);border-radius:14px;background:#090f1bd6}.dots{display:flex;gap:.4rem}.dots span{width:.65rem;height:.65rem;border-radius:50%;background:var(--muted);opacity:.65}.code{color:var(--muted);font: .9rem/1.8 "SFMono-Regular",Consolas,monospace}.code strong{color:var(--accent)}.code em{color:var(--blue);font-style:normal}
-    section{padding:5.5rem 0;border-top:1px solid var(--line)}.heading{max-width:650px;margin-bottom:2.3rem}.heading p,.card p,.timeline p{color:var(--muted)}.panel,.card,.timeline-item{border:1px solid var(--line);border-radius:var(--radius);background:#121d2eb8}.panel{padding:1.5rem}.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.fact{padding:1.1rem;border-radius:13px;background:var(--panel2)}.fact strong{display:block;color:var(--accent);font-size:1.7rem}.fact span{color:var(--muted);font-size:.9rem}.skills{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.3rem}.tag{padding:.4rem .7rem;border:1px solid #66e3c44d;border-radius:999px;color:var(--accent);background:#66e3c412;font-size:.85rem}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.card{display:flex;flex-direction:column;min-height:250px;padding:1.4rem}.number{color:var(--accent);font-family:monospace}.card .skills{margin-top:auto}.card-footer{padding-top:1.2rem}.text-link{color:var(--accent);text-decoration:none;font-weight:700}.text-link:hover{text-decoration:underline}.timeline{display:grid;gap:1rem}.timeline-item{display:grid;grid-template-columns:180px 1fr;gap:1.5rem;padding:1.4rem}.timeline-item time{color:var(--accent);font-weight:750}.timeline-item h3{margin-bottom:.25rem}.contact{align-items:stretch}.contact-list{display:grid;gap:.8rem;margin:1.5rem 0}.contact-list a{color:var(--muted);text-decoration:none}.contact-list a:hover{color:var(--accent)}.available{color:var(--accent);font-weight:700}footer{padding:2rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.footer{display:flex;justify-content:space-between;gap:1rem}.top{color:var(--accent);text-decoration:none}
-    @media(max-width:780px){.links{gap:.65rem;flex-wrap:wrap;justify-content:flex-end}.links a{font-size:.8rem}.hero-grid,.two-col{grid-template-columns:1fr;gap:2rem}.hero{padding-top:4.5rem}.cards{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:.35rem}.footer{align-items:flex-start;flex-direction:column}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transform:none}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ronnel Zamora — Software Developer</title>
+<meta name="description" content="Portfolio of Ronnel Zamora, software developer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAFAF9;
+    --bg-raised:#FFFFFF;
+    --ink:#15171C;
+    --ink-soft:#6B7078;
+    --ink-faint:#9A9DA4;
+    --accent:#3452FF;
+    --accent-ink:#1E3AE0;
+    --line:#E5E4DF;
+    --line-strong:#D3D2CB;
+    --added:#1F9D55;
+    --font-display:'Fraunces', serif;
+    --font-body:'Inter', -apple-system, sans-serif;
+    --font-mono:'JetBrains Mono', monospace;
+    --maxw:920px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  ::selection{background:var(--accent);color:#fff;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+
+  /* ---------- Nav ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,250,249,0.85);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    max-width:var(--maxw);margin:0 auto;padding:18px 32px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .logo{
+    font-family:var(--font-mono);
+    font-size:14px;font-weight:500;
+    display:flex;align-items:center;gap:8px;
+  }
+  .logo .dot{width:7px;height:7px;border-radius:50%;background:var(--added);display:inline-block;}
+  .navlinks{display:flex;gap:28px;font-size:14px;color:var(--ink-soft);}
+  .navlinks a{position:relative;padding:2px 0;transition:color .15s ease;}
+  .navlinks a:hover{color:var(--ink);}
+  .navlinks a::after{
+    content:'';position:absolute;left:0;bottom:-2px;width:0;height:1px;
+    background:var(--accent);transition:width .2s ease;
+  }
+  .navlinks a:hover::after{width:100%;}
+  .nav-cta{
+    font-family:var(--font-mono);font-size:13px;
+    border:1px solid var(--line-strong);border-radius:6px;
+    padding:7px 14px;transition:all .15s ease;
+  }
+  .nav-cta:hover{border-color:var(--accent);color:var(--accent);}
+  .menu-btn{display:none;background:none;border:none;cursor:pointer;padding:4px;}
+  .menu-btn span{display:block;width:20px;height:1.5px;background:var(--ink);margin:5px 0;}
+
+  /* ---------- Sections generic ---------- */
+  section{padding:96px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .eyebrow{
+    font-family:var(--font-mono);font-size:13px;color:var(--accent);
+    text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .eyebrow::before{content:'';width:16px;height:1px;background:var(--accent);display:inline-block;}
+  h2{font-family:var(--font-display);font-weight:500;font-size:clamp(28px,4vw,38px);letter-spacing:-0.01em;margin-bottom:8px;}
+  .section-intro{color:var(--ink-soft);max-width:520px;margin-bottom:56px;font-size:16px;}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- Hero ---------- */
+  #hero{
+    min-height:88vh;display:flex;flex-direction:column;justify-content:center;
+    padding:60px 0 96px;
+  }
+  .hero-kicker{
+    font-family:var(--font-mono);font-size:14px;color:var(--ink-soft);
+    display:flex;align-items:center;gap:10px;margin-bottom:24px;
+  }
+  .hero-kicker .cursor{
+    display:inline-block;width:8px;height:16px;background:var(--accent);
+    animation:blink 1.1s step-end infinite;
+  }
+  @keyframes blink{50%{opacity:0;}}
+  h1{
+    font-family:var(--font-display);
+    font-weight:500;
+    font-size:clamp(44px,8vw,84px);
+    line-height:0.98;
+    letter-spacing:-0.02em;
+    margin-bottom:28px;
+    max-width:820px;
+  }
+  h1 em{font-style:italic;color:var(--accent);}
+  .hero-sub{
+    font-size:19px;color:var(--ink-soft);max-width:560px;margin-bottom:40px;
+    line-height:1.65;
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px;}
+  .btn{
+    font-family:var(--font-body);font-weight:500;font-size:15px;
+    padding:13px 24px;border-radius:8px;transition:all .18s ease;
+    display:inline-flex;align-items:center;gap:8px;
+  }
+  .btn-primary{background:var(--ink);color:#fff;}
+  .btn-primary:hover{background:var(--accent);transform:translateY(-1px);}
+  .btn-ghost{border:1px solid var(--line-strong);color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--ink);}
+
+  .hero-meta{
+    display:flex;gap:40px;flex-wrap:wrap;
+    font-family:var(--font-mono);font-size:13px;color:var(--ink-faint);
+    padding-top:28px;border-top:1px solid var(--line);
+  }
+  .hero-meta strong{color:var(--ink);font-weight:500;}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:64px;align-items:start;}
+  .about-body p{color:var(--ink-soft);margin-bottom:18px;font-size:16px;max-width:52ch;}
+  .about-body p strong{color:var(--ink);font-weight:500;}
+  .facts{list-style:none;}
+  .facts li{
+    display:flex;justify-content:space-between;padding:14px 0;
+    border-bottom:1px solid var(--line);font-size:14px;
+  }
+  .facts li:first-child{padding-top:0;}
+  .facts .label{color:var(--ink-faint);font-family:var(--font-mono);}
+  .facts .value{color:var(--ink);font-weight:500;text-align:right;}
+
+  /* ---------- Projects ---------- */
+  .project{
+    display:grid;grid-template-columns:64px 1fr auto;gap:24px;align-items:start;
+    padding:32px 0;border-top:1px solid var(--line);
+    transition:padding-left .2s ease;
+  }
+  .project:hover{padding-left:8px;}
+  .project:last-child{border-bottom:1px solid var(--line);}
+  .project-index{font-family:var(--font-mono);color:var(--ink-faint);font-size:14px;padding-top:4px;}
+  .project-title{
+    font-family:var(--font-display);font-weight:500;font-size:24px;
+    margin-bottom:8px;display:flex;align-items:center;gap:10px;
+  }
+  .project-title a{transition:color .15s ease;}
+  .project:hover .project-title a{color:var(--accent);}
+  .status{
+    font-family:var(--font-mono);font-size:11px;padding:2px 8px;border-radius:20px;
+    display:inline-flex;align-items:center;gap:5px;font-weight:500;
+    border:1px solid var(--line-strong);color:var(--ink-soft);
+  }
+  .status.shipped{color:var(--added);border-color:var(--added);}
+  .status.shipped::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--added);}
+  .project-desc{color:var(--ink-soft);font-size:15px;max-width:56ch;margin-bottom:14px;}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;}
+  .tag{
+    font-family:var(--font-mono);font-size:12px;color:var(--ink-soft);
+    background:var(--bg-raised);border:1px solid var(--line);
+    padding:3px 9px;border-radius:5px;
+  }
+  .tag .plus{color:var(--added);margin-right:2px;}
+  .project-links{display:flex;flex-direction:column;gap:10px;align-items:flex-end;padding-top:6px;}
+  .project-links a{
+    font-family:var(--font-mono);font-size:13px;color:var(--ink-soft);
+    display:flex;align-items:center;gap:6px;white-space:nowrap;transition:color .15s ease;
+  }
+  .project-links a:hover{color:var(--accent);}
+
+  /* ---------- Skills ---------- */
+  .skill-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
+  .skill-group-label{
+    font-family:var(--font-mono);font-size:12px;color:var(--ink-faint);
+    text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px;
+  }
+  .skill-list{display:flex;flex-direction:column;gap:2px;}
+  .skill-row{
+    display:flex;align-items:center;gap:10px;padding:9px 0;
+    border-bottom:1px solid var(--line);font-size:15px;
+  }
+  .skill-row .plus{font-family:var(--font-mono);color:var(--added);font-size:14px;}
+
+  /* ---------- Contact ---------- */
+  #contact{text-align:left;}
+  .contact-inner{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:40px;}
+  .contact-big{font-family:var(--font-display);font-weight:500;font-size:clamp(32px,5vw,52px);letter-spacing:-0.01em;max-width:600px;line-height:1.1;}
+  .contact-big a{border-bottom:2px solid var(--accent);}
+  .contact-big a:hover{color:var(--accent);}
+  .social-list{display:flex;flex-direction:column;gap:12px;}
+  .social-list a{
+    font-family:var(--font-mono);font-size:14px;color:var(--ink-soft);
+    display:flex;align-items:center;gap:8px;
+  }
+  .social-list a:hover{color:var(--accent);}
+  .social-list .arrow{transition:transform .15s ease;}
+  .social-list a:hover .arrow{transform:translate(2px,-2px);}
+
+  footer{
+    padding:28px 0;display:flex;justify-content:space-between;
+    font-family:var(--font-mono);font-size:12px;color:var(--ink-faint);
+    flex-wrap:wrap;gap:8px;
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width:760px){
+    .navlinks{display:none;}
+    .menu-btn{display:block;}
+    .about-grid{grid-template-columns:1fr;gap:40px;}
+    .skill-groups{grid-template-columns:1fr;gap:28px;}
+    .project{grid-template-columns:1fr;gap:10px;}
+    .project-index{display:none;}
+    .project-links{align-items:flex-start;flex-direction:row;gap:20px;}
+    .contact-inner{flex-direction:column;align-items:flex-start;}
+    section{padding:64px 0;}
+    .wrap{padding:0 20px;}
+    nav{padding:16px 20px;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:0.01ms !important;transition-duration:0.01ms !important;}
+    html{scroll-behavior:auto;}
+  }
+
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
 </head>
 <body>
-  <a class="skip" href="#content">Skip to content</a>
-  <header><div class="container nav"><a class="brand" href="#home" aria-label="Alex Morgan home"><span class="mark">A</span>Alex Morgan</a><nav class="links" aria-label="Primary navigation"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav></div></header>
-  <main id="content">
-    <section id="home" class="hero"><div class="container hero-grid"><div><p class="eyebrow">Hello, I'm Alex</p><h1>Designing useful things for the web.</h1><p class="lead">I'm a front-end developer and recent graduate who turns complex problems into clear, accessible, and human-centered digital experiences.</p><div class="actions"><a class="button primary" href="#projects">View my work →</a><a class="button secondary" href="/cdn-cgi/l/email-protection#39515c555556795c41585449555c175a5654">Let's connect</a></div></div><div class="hero-card" aria-label="Code illustration"><div class="terminal"><div class="dots" aria-hidden="true"><span></span><span></span><span></span></div><p class="code"><strong>const</strong> portfolio = {<br>&nbsp;&nbsp;focus: <em>"people first"</em>,<br>&nbsp;&nbsp;status: <em>"always learning"</em>,<br>&nbsp;&nbsp;available: <em>true</em><br>};</p><p class="code"><strong>// make it meaningful</strong></p></div></div></div></section>
-    <section id="about"><div class="container two-col"><div class="heading"><p class="eyebrow">01 / About me</p><h2>Curious by nature. Intentional by design.</h2><p>I enjoy the space where design, technology, and communication overlap. During my studies, I built projects that helped me become a stronger problem-solver and collaborator.</p><p>When I'm away from my editor, you'll usually find me exploring a new city, photographing everyday details, or reading about the future of the web.</p></div><div class="panel facts" aria-label="Portfolio highlights"><div class="fact"><strong>12+</strong><span>Projects completed</span></div><div class="fact"><strong>3</strong><span>Years learning web development</span></div><div class="fact"><strong>100%</strong><span>Committed to accessible UX</span></div><div class="fact"><strong>∞</strong><span>Questions still to explore</span></div></div></div></section>
-    <section id="skills"><div class="container"><div class="heading"><p class="eyebrow">02 / Toolkit</p><h2>Skills I bring to a team.</h2><p>A practical foundation in front-end development, design thinking, and the habits that keep projects moving.</p></div><div class="panel"><h3>Technical skills</h3><div class="skills"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Responsive Design</span><span class="tag">Git &amp; GitHub</span><span class="tag">Accessibility</span><span class="tag">Figma</span><span class="tag">User Research</span></div></div></div></section>
-    <section id="projects"><div class="container"><div class="heading"><p class="eyebrow">03 / Selected work</p><h2> A few things I've made.</h2><p>Replace these examples with your own coursework, client work, or personal projects.</p></div><div class="cards"><article class="card"><span class="number">01</span><h3>Community Garden Finder</h3><p>A responsive directory that helps neighbors discover local gardens and volunteer opportunities.</p><div class="skills"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div><div class="card-footer"><a class="text-link" href="https://github.com/your-username" target="_blank" rel="noreferrer">Source code ↗</a></div></article><article class="card"><span class="number">02</span><h3>Study Session Planner</h3><p>A focused planning tool designed to make deadlines easier to see, understand, and act on.</p><div class="skills"><span class="tag">UX Design</span><span class="tag">Figma</span></div><div class="card-footer"><a class="text-link" href="https://github.com/your-username" target="_blank" rel="noreferrer">View project ↗</a></div></article><article class="card"><span class="number">03</span><h3>Local Café Brand Site</h3><p>A warm, mobile-first landing page that gives a small business a clearer digital presence.</p><div class="skills"><span class="tag">Branding</span><span class="tag">Responsive UI</span></div><div class="card-footer"><a class="text-link" href="https://github.com/your-username" target="_blank" rel="noreferrer">View project ↗</a></div></article></div></div></section>
-    <section id="experience"><div class="container"><div class="heading"><p class="eyebrow">04 / Experience</p><h2>Where I've been learning.</h2></div><div class="timeline"><article class="timeline-item"><time datetime="2025-09">2025 — Present</time><div><h3>Web Development Student · Your College</h3><p>Building accessible websites, collaborating on group projects, and developing a strong foundation in front-end development.</p></div></article><article class="timeline-item"><time datetime="2024-06">2024 — 2025</time><div><h3>Student Designer · Digital Media Club</h3><p>Created visual assets and simple web experiences for campus events while learning to communicate design decisions clearly.</p></div></article></div></div></section>
-    <section id="contact"><div class="container two-col contact"><div class="heading"><p class="eyebrow">05 / Contact</p><h2>Have a project or opportunity in mind?</h2><p>I'm currently open to internships, junior roles, and collaborative projects. The fastest way to reach me is by email.</p><p class="available">● Available for opportunities</p></div><div class="panel"><h3>Let's talk</h3><div class="contact-list"><a href="/cdn-cgi/l/email-protection#741c1118181b34110c15190418115a171b19"><span class="__cf_email__" data-cfemail="78101d141417381d00191508141d561b1715">[email&#160;protected]</span></a><a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/your-username" target="_blank" rel="noreferrer">GitHub ↗</a></div><a class="button primary" href="/cdn-cgi/l/email-protection#3f575a5353507f5a475e524f535a115c5052004c4a5d555a5c4b026f504d4b59505356501a0d0f504f4f504d4b4a51564b46">Send an email</a></div></div></section>
-  </main>
-  <footer><div class="container footer"><span>© 2026 Alex Morgan. Built with HTML and CSS.</span><a class="top" href="#home">Back to top ↑</a></div></footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+
+<header>
+  <nav>
+    <div class="logo"><span class="dot"></span>ronnel.zamora</div>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="#contact">say hi ↗</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section id="hero">
+    <div class="hero-kicker">
+      <span class="cursor"></span>
+      status: open to new-grad software roles
+    </div>
+    <h1>Building software<br>that's <em>obviously</em> well made.</h1>
+    <p class="hero-sub">
+      I'm Ronnel Zamora, a computer science graduate who likes taking ideas from a blank
+      file to something people actually use. I care about clean code, fast feedback loops,
+      and interfaces that don't need a manual.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#work">View my work</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>B.S. Computer Science</strong> · 2026</div>
+      <div><strong>4</strong> shipped projects</div>
+      <div><strong>Based in</strong> Manila, PH</div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="eyebrow">About</div>
+    <div class="about-grid">
+      <div class="about-body reveal">
+        <p>
+          I got into programming by trying to fix a scoreboard spreadsheet for a
+          school club, and never really stopped. Since then I've spent four years
+          studying <strong>computer science</strong>, building side projects most
+          weekends, and slowly getting less embarrassed about my old code.
+        </p>
+        <p>
+          I like working across the stack, but I'm happiest when I'm turning a rough
+          product idea into something with a clear structure &mdash; the kind of code
+          a teammate can read without a walkthrough. Outside of school projects, I've
+          contributed to a couple of open-source tools and mentored first-year students
+          in my department's coding club.
+        </p>
+        <p>
+          Right now I'm looking for a <strong>software engineering role</strong> where
+          I can keep learning from people who've shipped more than I have.
+        </p>
+      </div>
+      <ul class="facts reveal">
+        <li><span class="label">education</span><span class="value">B.S. Computer Science</span></li>
+        <li><span class="label">graduating</span><span class="value">June 2026</span></li>
+        <li><span class="label">focus</span><span class="value">Full-stack &amp; systems</span></li>
+        <li><span class="label">based in</span><span class="value">Manila, Philippines</span></li>
+        <li><span class="label">available</span><span class="value">Full-time, remote or on-site</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="eyebrow">Selected work</div>
+    <h2>Things I've built</h2>
+    <p class="section-intro">A few projects from coursework, hackathons, and weekends. Each one taught me something I use in the next.</p>
+
+    <div class="project reveal">
+      <div class="project-index">01</div>
+      <div>
+        <div class="project-title"><a href="#">Routine <span class="status shipped">shipped</span></a></div>
+        <p class="project-desc">A habit-tracking app with a shared-accountability feed, built for my senior capstone. Handles 400+ daily active test users during the pilot.</p>
+        <div class="tags">
+          <span class="tag"><span class="plus">+</span>React</span>
+          <span class="tag"><span class="plus">+</span>Node.js</span>
+          <span class="tag"><span class="plus">+</span>PostgreSQL</span>
+          <span class="tag"><span class="plus">+</span>Docker</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="#">Live site ↗</a>
+        <a href="#">Source ↗</a>
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="project-index">02</div>
+      <div>
+        <div class="project-title"><a href="#">Pathfind <span class="status shipped">shipped</span></a></div>
+        <p class="project-desc">An interactive visualizer for graph search algorithms &mdash; A*, Dijkstra, BFS &mdash; built to help classmates study for our algorithms final.</p>
+        <div class="tags">
+          <span class="tag"><span class="plus">+</span>TypeScript</span>
+          <span class="tag"><span class="plus">+</span>Canvas API</span>
+          <span class="tag"><span class="plus">+</span>Vite</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="#">Live site ↗</a>
+        <a href="#">Source ↗</a>
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="project-index">03</div>
+      <div>
+        <div class="project-title"><a href="#">Mess Hall <span class="status">in progress</span></a></div>
+        <p class="project-desc">A CLI tool that parses a fridge inventory and suggests recipes, with a small local model doing the matching. Weekend project, still growing.</p>
+        <div class="tags">
+          <span class="tag"><span class="plus">+</span>Python</span>
+          <span class="tag"><span class="plus">+</span>SQLite</span>
+          <span class="tag"><span class="plus">+</span>Click</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="#">Source ↗</a>
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="project-index">04</div>
+      <div>
+        <div class="project-title"><a href="#">Campus API <span class="status shipped">shipped</span></a></div>
+        <p class="project-desc">A REST API wrapping my university's public course catalog, used by three other student projects including a schedule builder.</p>
+        <div class="tags">
+          <span class="tag"><span class="plus">+</span>FastAPI</span>
+          <span class="tag"><span class="plus">+</span>Redis</span>
+          <span class="tag"><span class="plus">+</span>Railway</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="#">Docs ↗</a>
+        <a href="#">Source ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="eyebrow">Skills &amp; technologies</div>
+    <h2>What I work with</h2>
+    <p class="section-intro">Tools I reach for most, roughly grouped by where they show up in a project.</p>
+
+    <div class="skill-groups">
+      <div class="reveal">
+        <div class="skill-group-label">Languages</div>
+        <div class="skill-list">
+          <div class="skill-row"><span class="plus">+</span>JavaScript / TypeScript</div>
+          <div class="skill-row"><span class="plus">+</span>Python</div>
+          <div class="skill-row"><span class="plus">+</span>Java</div>
+          <div class="skill-row"><span class="plus">+</span>SQL</div>
+          <div class="skill-row"><span class="plus">+</span>C</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="skill-group-label">Frameworks &amp; libraries</div>
+        <div class="skill-list">
+          <div class="skill-row"><span class="plus">+</span>React</div>
+          <div class="skill-row"><span class="plus">+</span>Node.js / Express</div>
+          <div class="skill-row"><span class="plus">+</span>FastAPI</div>
+          <div class="skill-row"><span class="plus">+</span>Tailwind CSS</div>
+          <div class="skill-row"><span class="plus">+</span>Pandas</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="skill-group-label">Tools &amp; platforms</div>
+        <div class="skill-list">
+          <div class="skill-row"><span class="plus">+</span>Git / GitHub</div>
+          <div class="skill-row"><span class="plus">+</span>Docker</div>
+          <div class="skill-row"><span class="plus">+</span>PostgreSQL</div>
+          <div class="skill-row"><span class="plus">+</span>AWS (EC2, S3)</div>
+          <div class="skill-row"><span class="plus">+</span>Linux</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="eyebrow">Get in touch</div>
+    <div class="contact-inner">
+      <div class="contact-big reveal">
+        Have a role in mind, or just want to talk shop?<br>
+        <a href="mailto:ronnelzamora00@gmail.com">ronnelzamora00@gmail.com</a>
+      </div>
+      <div class="social-list reveal">
+        <a href="#">GitHub <span class="arrow">↗</span></a>
+        <a href="#">LinkedIn <span class="arrow">↗</span></a>
+        <a href="#">Resume (PDF) <span class="arrow">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span>&copy; 2026 Ronnel Zamora</span>
+  <span>Built from scratch, no template</span>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
 </html>
